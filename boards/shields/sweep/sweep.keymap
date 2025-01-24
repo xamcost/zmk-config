@@ -10,9 +10,9 @@
 #define HRMR(k1,k2,k3,k4) &ht RCTRL k1  &ht RALT k2  &ht RGUI k3  &ht RSHFT k4
 
 // Keycode macros
-#define KCOPY(k1) &ht LGUI(C) k1
-#define KPASTE(k1) &ht LGUI(V) k2
-#define KCUT(k1) &ht LGUI(X) k3
+//#define KCOPY(k1) &ht LGUI(C) k1
+//#define KPASTE(k1) &ht LGUI(V) k2
+//#define KCUT(k1) &ht LGUI(X) k3
 
 / {
     behaviors {
@@ -71,7 +71,7 @@
             HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,       SEMI)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-            &kp Z      KCUT(X)    KCOPY(C)   KPASTE(V)  &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &lt 2 TAB  &kp BSPC       &kp SPACE  &lt 1 ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
