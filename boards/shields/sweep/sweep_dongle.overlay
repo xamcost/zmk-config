@@ -34,10 +34,10 @@
 &pro_micro_i2c {
     status = "okay";
     oled: sh1106@3c {
-        compatible = "solomon,ssd1306fb";
+        compatible = "sinowealth,sh1106";
         reg = <0x3c>;
-        width = <128>;
-        height = <32>;
+        width = <129>;
+        height = <64>;
         segment-offset = <1>;
         page-offset = <0>;
         display-offset = <0>;
