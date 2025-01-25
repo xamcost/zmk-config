@@ -9,11 +9,6 @@
 #define HRML(k1,k2,k3,k4) &mt LCTRL k1  &mt LALT k2  &mt LGUI k3  &mt LSHFT k4
 #define HRMR(k1,k2,k3,k4) &mt RSHFT k1  &mt RGUI k2  &mt RALT k3  &mt RCTRL k4
 
-// Keycode macros
-//#define KCOPY(k1) &ht LGUI(C) k1
-//#define KPASTE(k1) &ht LGUI(V) k2
-//#define KCUT(k1) &ht LGUI(X) k3
-
 / {
     behaviors {
         ht: hold_tap {
@@ -24,6 +19,18 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
+        };
+        td_l1: tap_dance_mod_tap {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt 1 SQT>, <&kp tog 1>;
+        };
+        td_l2: tap_dance_mod_tap {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt 2 TAB>, <&kp tog 2>;
         };
     };
 
@@ -78,7 +85,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &mt LG(X) X &mt LG(C) C &mt LG(V) V &kp B       &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &lt 2 TAB  &kp BSPC       &kp SPACE  &lt 1 ENTER
+                                             &td_l2     &kp BSPC       &kp SPACE  &td_l1
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -95,7 +102,7 @@
         //│  ~       │  }       │  )       │  ]       │  >       │   │  0 )     │  1 !     │  2 @     │  3 #     │  \ |     │
             &kp TILDE  &kp RBRC   &kp RPAR   &kp RBKT   &kp GT         &kp N0     &kp N1     &kp N2     &kp N3     &kp BSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &lt 3 TAB  &kp BSPC       &kp SPACE  &lt 1 ENTER
+                                             &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
