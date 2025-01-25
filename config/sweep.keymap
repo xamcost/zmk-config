@@ -24,13 +24,13 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&lt 1 SQT>, <&kp tog 1>;
+            bindings = <&lt 1 SQT>, <&tog 1>;
         };
         td_l2: tap_dance_layer_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&lt 2 TAB>, <&kp tog 2>;
+            bindings = <&lt 2 TAB>, <&tog 2>;
         };
     };
 
