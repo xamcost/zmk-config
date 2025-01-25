@@ -20,13 +20,13 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
-        td_l1: tap_dance_mod_tap {
+        td_l1: tap_dance_layer_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&lt 1 SQT>, <&kp tog 1>;
         };
-        td_l2: tap_dance_mod_tap {
+        td_l2: tap_dance_layer_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
